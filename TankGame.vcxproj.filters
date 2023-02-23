@@ -16,10 +16,24 @@
     <Filter Include="ソース ファイル\System">
       <UniqueIdentifier>{195f949d-b14b-4f71-8b46-506265192b53}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\System">
+      <UniqueIdentifier>{a1923110-df81-4a83-b8f7-9139dd496847}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>ソース ファイル\System</Filter>
     </ClCompile>
+    <ClCompile Include="SystemManager.cpp">
+      <Filter>ソース ファイル\System</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SystemManager.h">
+      <Filter>ヘッダー ファイル\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Reference.h">
+      <Filter>ヘッダー ファイル\System</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,22 +1,10 @@
-#include"DxLib.h"
+#include"SystemManager.h"
 
-int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
+int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_  HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nShowCmd)
 {
-    // DxLib初期化
-    ChangeWindowMode(TRUE);
-    SetGraphMode(1440, 900, 16);
-    DxLib_Init();
+	App::SystemManager* SystemManager = new App::SystemManager();
+	SystemManager->Loop();
+	SystemManager->Finalize();
 
-
-    // ゲームループ
-    while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0)
-    {
-        //画面更新処理
-        ClearDrawScreen();
-
-        ScreenFlip();
-    }
-
-    DxLib_End();
-    return 0;
+	return 0;
 }
