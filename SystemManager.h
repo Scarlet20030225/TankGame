@@ -1,29 +1,29 @@
 #pragma once
 #include"DxLib.h"
+#include"ProcessingManager.h"
 
 namespace App
 {
+	/// <summary>
+	/// システムのマネージャー
+	/// </summary>
 	class SystemManager
 	{
 	public:
-		/// <summary>
-		/// コンストラクタ
-		/// </summary>
 		SystemManager();
-		/// <summary>
-		/// デストラクタ
-		/// </summary>
 		~SystemManager();
+
 		/// <summary>
 		/// ゲームループ
 		/// </summary>
 		void Loop();
+
 		/// <summary>
 		/// ファイナライズ
 		/// </summary>
 		void Finalize();
 
 	private:
-
+		ProcessingManager* processingManager;
 	};
 }

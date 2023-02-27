@@ -9,14 +9,23 @@ namespace App
 {
 	SystemManager::SystemManager()
 	{
-		// DxLib初期化
 		ChangeWindowMode(TRUE);
 		SetGraphMode(screenSizeX, screenSizeY, colorBitDepth);
 		DxLib_Init();
+
+		//---------------------------------------------------------------------------------------------------------
+		// 初期化処理
+		//---------------------------------------------------------------------------------------------------------
+		processingManager = new App::ProcessingManager();
+		processingManager->AllInit();
 	}
 
 	SystemManager::~SystemManager()
 	{
+		processingManager->~ProcessingManager();
+
+		delete processingManager;
+		processingManager = nullptr;
 	}
 
 	void SystemManager::Loop()
@@ -29,7 +38,7 @@ namespace App
 			//---------------------------------------------------------------------------------------------------------
 			// 更新処理
 			//---------------------------------------------------------------------------------------------------------
-			
+			processingManager->AllUpdate(deltaTime);
 
 			// 画面更新
 			ClearDrawScreen();
@@ -37,7 +46,7 @@ namespace App
 			//---------------------------------------------------------------------------------------------------------
 			// 描画処理
 			//---------------------------------------------------------------------------------------------------------
-
+			processingManager->AllDraw();
 
 			// 描画を確定
 			ScreenFlip();
