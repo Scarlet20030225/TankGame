@@ -3,13 +3,8 @@
 
 namespace App
 {
-	ProcessingManager::ProcessingManager()
-	{
-	}
-
-	ProcessingManager::~ProcessingManager()
-	{
-	}
+	ProcessingManager::ProcessingManager(){}
+	ProcessingManager::~ProcessingManager(){}
 
 	void ProcessingManager::AllInit()
 	{

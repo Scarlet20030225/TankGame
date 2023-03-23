@@ -18,7 +18,7 @@ namespace Lib
 	const int colorBitDepth = 32;
 
 	/// <summary>
-	/// フレームを60fpsに
+	/// フレームレート
 	/// </summary>
 	const int fps = 60;
 
