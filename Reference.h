@@ -49,12 +49,12 @@ namespace Lib
 	/// <summary>
 	/// カメラのX座標
 	/// </summary>
-	const float cameraPosX = 0.0f;
+	const float cameraPosX = 960.0f;
 
 	/// <summary>
 	/// カメラのY座標
 	/// </summary>
-	const float cameraPosY = 0.0f;
+	const float cameraPosY = 540.0f;
 
 	/// <summary>
 	/// カメラのZ座標
@@ -64,12 +64,12 @@ namespace Lib
 	/// <summary>
 	/// カメラのX座標注視点
 	/// </summary>
-	const float cameraGazingPosX = 0.0f;
+	const float cameraGazingPosX = 960.0f;
 
 	/// <summary>
 	/// カメラのY座標注視点
 	/// </summary>
-	const float cameraGazingPosY = 0.0f;
+	const float cameraGazingPosY = 540.0f;
 
 	/// <summary>
 	/// カメラのZ座標注視点

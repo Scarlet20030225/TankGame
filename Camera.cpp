@@ -9,7 +9,7 @@ namespace App
 	Camera::Camera()
 	{
 		SetCameraNearFar(cameraNear, cameraFar);
-		SetCameraPositionAndTarget_UpVecY(VGet(0.0f, 0.0f, cameraPosZ), VGet(0.0f, 0.0f, cameraGazingPosZ));
+		SetCameraPositionAndTarget_UpVecY(VGet(cameraPosX, cameraPosY, cameraPosZ), VGet(cameraGazingPosX, cameraGazingPosY, cameraGazingPosZ));
 	}
 
 	Camera::~Camera() {}
