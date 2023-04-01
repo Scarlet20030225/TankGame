@@ -136,12 +136,14 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="ProcessingManager.cpp" />
     <ClCompile Include="SystemManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="ProcessingManager.h" />
     <ClInclude Include="Reference.h" />
     <ClInclude Include="SystemManager.h" />
