@@ -1,4 +1,6 @@
 #pragma once
+#include"Camera.h"
+#include"Map.h"
 
 namespace App
 {
@@ -12,11 +14,6 @@ namespace App
 		~ProcessingManager();
 
 		/// <summary>
-		/// 全ての初期化処理
-		/// </summary>
-		void AllInit();
-
-		/// <summary>
 		/// 全ての更新処理
 		/// </summary>
 		/// <param name="deltaTime"></param>
@@ -28,6 +25,7 @@ namespace App
 		void AllDraw();
 
 	private:
-
+		Camera* camera;
+		Map* map;
 	};
 }

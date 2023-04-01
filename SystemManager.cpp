@@ -17,7 +17,6 @@ namespace App
 		// ‰Šú‰»ˆ—
 		//---------------------------------------------------------------------------------------------------------
 		processingManager = new App::ProcessingManager();
-		processingManager->AllInit();
 	}
 
 	SystemManager::~SystemManager()

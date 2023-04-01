@@ -3,18 +3,23 @@
 
 namespace App
 {
-	ProcessingManager::ProcessingManager(){}
-	ProcessingManager::~ProcessingManager(){}
+	ProcessingManager::ProcessingManager()
+	{
+		camera = new App::Camera();
+		map = new App::Map();
+	}
 
-	void ProcessingManager::AllInit()
+	ProcessingManager::~ProcessingManager()
 	{
 	}
 
 	void ProcessingManager::AllUpdate(float deltaTime)
 	{
+		map->Update();
 	}
 
 	void ProcessingManager::AllDraw()
 	{
+		map->Draw();
 	}
 }
