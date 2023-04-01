@@ -10,8 +10,8 @@ namespace App
 		mModelHandle = MV1LoadModel("data/Model/MapBlock.mv1");
 		mPos = VGet(0.0f, 0.0f, 0.0f);
 
-		baseBlockNumX = BaseBlockX;
-		baseBlockNumY = BaseBlockY;
+		baseBlockNumX = baseBlockX;
+		baseBlockNumY = baseBlockY;
 	}
 
 	Map::~Map()
