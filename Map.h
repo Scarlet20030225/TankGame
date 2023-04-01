@@ -18,7 +18,7 @@ namespace App
 	private:
 		int mModelHandle;
 		VECTOR mPos;
-		int blockNumX;
-		int blockNumY;
+		int baseBlockNumX;
+		int baseBlockNumY;
 	};
 }
