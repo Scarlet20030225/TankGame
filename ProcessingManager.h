@@ -1,6 +1,7 @@
 #pragma once
 #include"Camera.h"
 #include"Map.h"
+#include"Player.h"
 
 namespace App
 {
@@ -27,5 +28,6 @@ namespace App
 	private:
 		Camera* camera;
 		Map* map;
+		Player* player;
 	};
 }
