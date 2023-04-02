@@ -8,6 +8,7 @@ namespace App
 	Map::Map()
 	{
 		mModelHandle = MV1LoadModel("data/Model/MapBlock.mv1");
+		MV1SetMaterialEmiColor(mModelHandle, 0, GetColorF(0.6f, 1.0f, 0.3f, 0.5f));		// F‚ğÂF‚É
 		mPos = VGet(0.0f, 0.0f, 0.0f);
 
 		baseBlockNumX = baseBlockX;
