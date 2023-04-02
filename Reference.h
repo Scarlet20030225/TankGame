@@ -82,12 +82,12 @@ namespace Lib
 	/// <summary>
 	/// ベースとなるブロックの数 X
 	/// </summary>
-	const int baseBlockX = 15;
+	const int baseBlockX = 35;
 
 	/// <summary>
 	/// ベースとなるブロックの数 Y
 	/// </summary>
-	const int baseBlockY = 15;
+	const int baseBlockY = 20;
 
 //-------------------------------------------------------------------------
 // コントローラー関係
