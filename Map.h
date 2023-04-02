@@ -16,6 +16,8 @@ namespace App
 		void Draw();
 
 	private:
+		int mGraphHandle;
+
 		int mModelHandle;
 		VECTOR mPos;
 		int baseBlockNumX;
