@@ -16,6 +16,8 @@ namespace App
 		void Draw();
 
 	private:
+		void MovableRange();
+
 		VECTOR mPos;			// 座標
 		int mBodyModelHandle;	// ボディモデルハンドル
 		int mHeadModelHandle;	// 砲身モデルハンドル
