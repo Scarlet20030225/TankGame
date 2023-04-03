@@ -19,7 +19,7 @@ namespace App
 		void Loop();
 
 		/// <summary>
-		/// ファイナライズ
+		/// 終了処理
 		/// </summary>
 		void Finalize();
 

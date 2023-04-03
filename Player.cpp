@@ -23,7 +23,7 @@ namespace App
 
 		moveX = 0.0f;
 		moveY = 0.0f;
-		mSpeed = playerSpeed;
+		mSpeed = speed;
 	}
 
 	Player::~Player()

@@ -12,6 +12,14 @@ namespace App
 
 	ProcessingManager::~ProcessingManager()
 	{
+		delete camera;
+		camera = nullptr;
+
+		delete map;
+		map = nullptr;
+
+		delete player;
+		player = nullptr;
 	}
 
 	void ProcessingManager::AllUpdate(float deltaTime)

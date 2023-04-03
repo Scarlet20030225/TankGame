@@ -95,23 +95,18 @@ namespace Lib
 	/// <summary>
 	/// 初期のマウスX座標
 	/// </summary>
-	const int setMousePointX = 0.0f;
+	const int setMousePointX = 960;
 
 	/// <summary>
 	/// 初期のマウスY座標
 	/// </summary>
-	const int setMousePointY = 0.0f;
-	
-	/// <summary>
-	/// 初期のマウスZ座標
-	/// </summary>
-	const int setMousePointZ = 0.0f;
+	const int setMousePointY = 540;
 
 //-------------------------------------------------------------------------
 // ステータス関係
 //-------------------------------------------------------------------------
 	/// <summary>
-	/// プレイヤーの移動速度
+	/// 移動速度
 	/// </summary>
-	const float playerSpeed = 1.0f;
+	const float speed = 1.0f;
 }
