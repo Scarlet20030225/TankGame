@@ -32,21 +32,21 @@ namespace App
 
 	void Player::MovableRange()
 	{
-		if (mPos.x <= 20)
+		if (mPos.x <= 30)
 		{
-			mPos.x = 20;
+			mPos.x = 30;
 		}
-		if (mPos.x >= 1930)
+		if (mPos.x >= 1890)
 		{
-			mPos.x = 1930;
+			mPos.x = 1890;
 		}
-		if (mPos.y <= 20)
+		if (mPos.y <= 40)
 		{
-			mPos.y = 20;
+			mPos.y = 40;
 		}
-		if (mPos.y >= 955)
+		if (mPos.y >= 960)
 		{
-			mPos.y = 955;
+			mPos.y = 960;
 		}
 	}
 

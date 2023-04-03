@@ -27,7 +27,8 @@ namespace App
 
 	void Map::Draw()
 	{
-		DrawBillboard3D(VGet(0.0f, 0.0f, 0.0f), 0.0f, 0.0f, 1950.0f, 0.0f, mGraphHandle, TRUE);
+		//DrawBillboard3D(VGet(960.0f, 540.0f, 0.0f), 0.5f, 0.5f, 1950.0f, 0.0f, mGraphHandle, TRUE);
+
 		//for (int i = 0; i < baseBlockNumY; i++)
 		//{
 		//	for (int j = 0; j < baseBlockNumX; j++)
@@ -39,5 +40,22 @@ namespace App
 		//		MV1DrawModel(mModelHandle);	// ƒ‚ƒfƒ‹‚ð•`‰æ
 		//	}
 		//}
+
+		// ŠiŽqü‚Ì•`‰æ
+		for (float x = 0.0f; x <= 1920.0f; x += 40.0f)
+		{
+			DrawLine3D(VGet(x, 0.0f, 0.0f), VGet(x, 1000.0f, 0.0f), GetColor(255, 255, 255));
+		}
+
+		for (float y = 0.0f; y <= 1000.0f; y += 40.0f)
+		{
+			DrawLine3D(VGet(0.0f, y, 0.0f), VGet(1920.0f, y, 0.0f), GetColor(255, 255, 255));
+		}
+
+		for (float z = 0.0f; z <= 0.0f; z += 40.0f)
+		{
+			DrawLine3D(VGet(0.0f, 0.0f, z), VGet(1920.0f, 0.0f, z), GetColor(255, 255, 255));
+			DrawLine3D(VGet(0.0f, 0.0f, z), VGet(0.0f, 1000.0f, z), GetColor(255, 255, 255));
+		}
 	}
 }
