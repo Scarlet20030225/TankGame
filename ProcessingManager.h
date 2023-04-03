@@ -1,7 +1,10 @@
 #pragma once
+#include"Reference.h"
 #include"Camera.h"
 #include"Map.h"
 #include"Player.h"
+
+using namespace Lib;
 
 namespace App
 {
@@ -29,5 +32,6 @@ namespace App
 		Camera* camera;
 		Map* map;
 		Player* player;
+		PlayerShot* playerShot[bulletNum] = { nullptr };
 	};
 }

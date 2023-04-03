@@ -109,4 +109,19 @@ namespace Lib
 	/// ˆÚ“®‘¬“x
 	/// </summary>
 	const float speed = 1.0f;
+
+	/// <summary>
+	/// ’e‚Ì”
+	/// </summary>
+	const int bulletNum = 5;
+
+	/// <summary>
+	/// ’e‚Ì‘¬“x
+	/// </summary>
+	const float bulletSpeed = 0.5f;
+
+	/// <summary>
+	/// ’e‚Ì”­ËŠÔŠu
+	/// </summary>
+	const float shotInterval = 10.0f;
 }

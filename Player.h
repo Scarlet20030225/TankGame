@@ -1,5 +1,6 @@
 #pragma once
 #include"DxLib.h"
+#include"PlayerShot.h"
 
 namespace App
 {
@@ -12,7 +13,7 @@ namespace App
 		Player();
 		~Player();
 
-		void Update(float deltaTime);
+		void Update(float deltaTime, PlayerShot* playerShot[]);
 		void Draw();
 
 	private:
@@ -22,8 +23,8 @@ namespace App
 		int mBodyModelHandle;	// ボディモデルハンドル
 		int mHeadModelHandle;	// 砲身モデルハンドル
 		float mSpeed;			// 速度
-		float moveX;	// Xの移動量
-		float moveY;	// Yの移動量
+		float moveX;			// Xの移動量
+		float moveY;			// Yの移動量
 
 		VECTOR mMousePoint;
 		int getMousePointX;		// マウスのX座標
@@ -33,5 +34,7 @@ namespace App
 		float directionY;
 		float radian;
 		float degree;
+
+		float mShotInterval;
 	};
 }

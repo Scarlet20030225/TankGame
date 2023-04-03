@@ -13,8 +13,8 @@ namespace App
 		mHeadModelHandle = MV1LoadModel("data/Model/TankHead.mv1");
 		MV1SetScale(mBodyModelHandle, VGet(1.5f, 1.5f, 1.5f));
 		MV1SetScale(mHeadModelHandle, VGet(1.5f, 1.5f, 1.5f));
-		MV1SetMaterialEmiColor(mBodyModelHandle, 0, GetColorF(0.0f, 0.0f, 1.0f, 1.0f));		// 色を青色に
-		MV1SetMaterialEmiColor(mHeadModelHandle, 0, GetColorF(0.0f, 0.0f, 1.0f, 1.0f));		// 色を青色に
+		MV1SetMaterialEmiColor(mBodyModelHandle, 0, GetColorF(0.0f, 0.0f, 1.0f, 1.0f));		// 胴体の色を青色に
+		MV1SetMaterialEmiColor(mHeadModelHandle, 0, GetColorF(0.0f, 0.0f, 1.0f, 1.0f));		// 砲身の色を青色に
 
 		cursorGraphHandle = LoadGraph("data/Graph/Scope.png");
 
@@ -24,6 +24,8 @@ namespace App
 		moveX = 0.0f;
 		moveY = 0.0f;
 		mSpeed = speed;
+
+		mShotInterval = 0.0f;
 	}
 
 	Player::~Player()
@@ -50,7 +52,7 @@ namespace App
 		}
 	}
 
-	void Player::Update(float deltaTime)
+	void Player::Update(float deltaTime, PlayerShot* playerShot[])
 	{
 		bool input = false;	// 移動キーの入力があるか？
 		
@@ -141,6 +143,30 @@ namespace App
 		radian = atan2f(directionY, directionX);
 
 		MV1SetRotationXYZ(mHeadModelHandle, VGet(0.0f, 0.0f, radian));
+
+
+		// 弾を発射
+		if (GetMouseInput() & MOUSE_INPUT_LEFT)
+		{
+			if (mShotInterval == 0.0f)
+			{
+				for (int i = 0; i < bulletNum; i++)
+				{
+					if (!playerShot[i]->IsActive())
+					{
+						playerShot[i]->OnShot(mPos.x, mPos.y, mPos.z);
+
+						break;
+					}
+				}
+				mShotInterval = shotInterval;
+			}
+		}
+
+		if (mShotInterval != 0.0f)
+		{
+			--mShotInterval;
+		}
 	}
 
 	void Player::Draw()
