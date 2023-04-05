@@ -17,6 +17,9 @@ namespace App
 		void Draw();
 
 	private:
+		/// <summary>
+		/// 移動可能な範囲
+		/// </summary>
 		void MovableRange();
 
 		VECTOR mPos;			// 座標
@@ -30,9 +33,9 @@ namespace App
 		int getMousePointX;		// マウスのX座標
 		int getMousePointY;		// マウスのY座標
 		int cursorGraphHandle;	// マウスカーソルのグラフハンドル
-		float directionX;
-		float directionY;
-		float radian;
+		float directionX;		// プレイヤーとマウスカーソルのX座標の差
+		float directionY;		// プレイヤーとマウスカーソルのY座標の差
+		float radian;			// 角度算出
 		float degree;
 
 		float mShotInterval;
