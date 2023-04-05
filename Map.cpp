@@ -36,11 +36,6 @@ namespace App
 		{
 			DrawLine3D(VGet(0.0f, y, 0.0f), VGet(1920.0f, y, 0.0f), GetColor(255, 255, 255));
 		}
-		for (float z = 0.0f; z <= 0.0f; z += 40.0f)
-		{
-			DrawLine3D(VGet(0.0f, 0.0f, z), VGet(1920.0f, 0.0f, z), GetColor(255, 255, 255));
-			DrawLine3D(VGet(0.0f, 0.0f, z), VGet(0.0f, 960.0f, z), GetColor(255, 255, 255));
-		}
 
 		// ブロックの描画
 		for (int i = 0; i < baseBlockNumX; i++)	// X下段の壁
