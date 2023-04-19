@@ -10,7 +10,7 @@ namespace App
 		mGraphHandle = LoadGraph("data/Graph/MapBase.png");
 		mModelHandle = MV1LoadModel("data/Model/MapBlock.mv1");
 		MV1SetScale(mModelHandle, VGet(0.85f, 0.85f, 0.85f));
-		MV1SetMaterialEmiColor(mModelHandle, 0, GetColorF(0.6f, 1.0f, 0.3f, 0.5f));		// F‚ğÂF‚É
+		MV1SetMaterialEmiColor(mModelHandle, 0, GetColorF(0.6f, 1.0f, 0.3f, 0.5f));		// ï¿½Fï¿½ï¿½ÂFï¿½ï¿½
 		mPos = VGet(0.0f, 0.0f, 0.0f);
 
 		baseBlockNumX = baseBlockX;
@@ -27,7 +27,7 @@ namespace App
 
 	void Map::Draw()
 	{
-		// Šiqü‚Ì•`‰æ
+		// ï¿½iï¿½qï¿½ï¿½ï¿½Ì•`ï¿½ï¿½
 		for (float x = 0.0f; x <= 1920.0f; x += 40.0f)
 		{
 			DrawLine3D(VGet(x, 0.0f, 0.0f), VGet(x, 960.0f, 0.0f), GetColor(255, 255, 255));
@@ -37,8 +37,8 @@ namespace App
 			DrawLine3D(VGet(0.0f, y, 0.0f), VGet(1920.0f, y, 0.0f), GetColor(255, 255, 255));
 		}
 
-		// ƒuƒƒbƒN‚Ì•`‰æ
-		for (int i = 0; i < baseBlockNumX; i++)	// X‰º’i‚Ì•Ç
+		// ï¿½uï¿½ï¿½ï¿½bï¿½Nï¿½Ì•`ï¿½ï¿½
+		for (int i = 0; i < baseBlockNumX; i++)	// Xï¿½ï¿½ï¿½iï¿½Ì•ï¿½
 		{
 			mPos.x = -80.0f + 86.8 * i;
 			mPos.y = -3.0f;
@@ -47,7 +47,7 @@ namespace App
 			MV1SetPosition(mModelHandle, mPos);
 			MV1DrawModel(mModelHandle);
 		}
-		for (int j = 0; j < baseBlockNumX; j++)	// Xã’i‚Ì•Ç
+		for (int j = 0; j < baseBlockNumX; j++)	// Xï¿½ï¿½iï¿½Ì•ï¿½
 		{
 			mPos.x = -80.0f + 86.8 * j;
 			mPos.y = 953.0f;
@@ -56,7 +56,7 @@ namespace App
 			MV1SetPosition(mModelHandle, mPos);
 			MV1DrawModel(mModelHandle);
 		}
-		for (int k = 0; k < baseBlockNumY; k++)	// Y¶‘¤‚Ì•Ç
+		for (int k = 0; k < baseBlockNumY; k++)	// Yï¿½ï¿½ï¿½ï¿½ï¿½Ì•ï¿½
 		{
 			mPos.x = -80.0f;
 			mPos.y = 85.0f + 86.8 * k;
@@ -65,7 +65,7 @@ namespace App
 			MV1SetPosition(mModelHandle, mPos);
 			MV1DrawModel(mModelHandle);
 		}
-		for (int l = 0; l < baseBlockNumY; l++)	// Y‰E‘¤‚Ì•Ç
+		for (int l = 0; l < baseBlockNumY; l++)	// Yï¿½Eï¿½ï¿½ï¿½Ì•ï¿½
 		{
 			mPos.x = 1916.4f;
 			mPos.y = 85.0f + 86.8 * l;
